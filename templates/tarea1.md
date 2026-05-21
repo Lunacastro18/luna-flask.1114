@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Primera Aplicación Flask</title>
+
+   
+<body>
+    <h1>¡Hola desde Flask!</h1>
+</body>
+<body>
+ <title>Preguntas de Reflexión Técnica - Flask</title>
+
+    <h1>Preguntas de Reflexión Técnica</h1>
+
+    <h2>1. ¿Qué problema concreto resuelve el entorno virtual en un proyecto Python?</h2>
+    <p>
+        El entorno virtual permite crear un espacio aislado donde se instalan únicamente las librerías necesarias
+        para un proyecto específico. Esto evita conflictos entre versiones de paquetes y permite que cada proyecto
+        tenga sus propias dependencias sin afectar a otros proyectos instalados en la misma computadora.
+    </p>
+
+    <h2>2. ¿Qué diferencia hay entre instalar Flask globalmente y hacerlo dentro de .venv?</h2>
+    <p>
+        Si Flask se instala globalmente, estará disponible para todos los proyectos del sistema, lo que puede
+        generar conflictos si distintos proyectos necesitan versiones diferentes. En cambio, al instalar Flask
+        dentro de <code>.venv</code>, solo ese proyecto utilizará esa versión específica, manteniendo un entorno
+        independiente y controlado.
+    </p>
+
+    <h2>3. ¿Por qué requirements.txt forma parte del proyecto y no de tu máquina personal?</h2>
+    <p>
+        Porque <code>requirements.txt</code> guarda la lista de dependencias y versiones necesarias para ejecutar
+        el proyecto. Esto permite que cualquier persona pueda instalar exactamente las mismas librerías y lograr
+        que la aplicación funcione de la misma manera en cualquier computadora.
+    </p>
+
+    <h2>4. Cuando ejecutas python app.py, ¿qué archivo actúa como punto de entrada y por qué?</h2>
+    <p>
+        El archivo <code>app.py</code> actúa como punto de entrada porque contiene la configuración principal de
+        Flask, las rutas de la aplicación y la instrucción <code>app.run()</code>, que inicia el servidor web.
+    </p>
+
+    <h2>5. ¿Qué relación hay entre la ruta /, la función inicio() y el archivo templates/index.html?</h2>
+    <p>
+        La ruta <code>/</code> representa la página principal del sitio web. Cuando un usuario accede a esa
+        dirección, Flask ejecuta la función <code>inicio()</code>. Esta función retorna la plantilla
+        <code>templates/index.html</code>, que es el archivo HTML que se muestra en el navegador.
+    </p>
+
+    <h2>6. ¿Qué evidencia te da la terminal de que el servidor arrancó correctamente?</h2>
+    <p>
+        La terminal muestra mensajes como:
+    </p>
+
+    <pre>
+* Serving Flask app 'app'
+* Debug mode: on
+* Running on http://127.0.0.1:5000
+    </pre>
+
+    <p>
+        Estos mensajes indican que Flask inició correctamente y que la aplicación está disponible en esa dirección.
+    </p>
+
+    <h2>7. Si cambias el HTML y el navegador muestra otra cosa, ¿qué te demuestra eso sobre el flujo entre backend y frontend en este proyecto?</h2>
+    <p>
+        Demuestra que el backend, desarrollado con Flask, se encarga de cargar y enviar la plantilla HTML al
+        navegador. Al modificar el archivo HTML y recargar la página, los cambios se reflejan de inmediato,
+        evidenciando la conexión entre el servidor (backend) y la interfaz visual (frontend).
+    </p>
+
+</body>
+</html>
