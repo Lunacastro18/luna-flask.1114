@@ -1,21 +1,22 @@
+# Importamos Flask y una funcion que permite mostrar un HTML.
 from flask import Flask, render_template
 
+
+# Creamos la aplicacion principal.
+# Este objeto sera el centro de nuestro proyecto Flask.
 app = Flask(__name__)
 
-@app.route('/')
-def inicio():
-    # Definimos las 3 variables en el backend
-    nombre_usuario = "Luis Gabriel"
-    mensaje_bienvenida = "¡Bienvenido a tu primer panel dinámico en Flask!"
-    fecha_actual = "Miércoles, 20 de Mayo de 2026"
-    
-    # Las enviamos a la plantilla HTML
-    return render_template(
-        'index.html', 
-        usuario=nombre_usuario, 
-        mensaje=mensaje_bienvenida, 
-        fecha=fecha_actual
-    )
 
-if __name__ == '__main__':
-    app.run(debug=True) # Activamos modo debug para ver cambios sin reiniciar
+# Cuando alguien entra a la direccion principal del sitio, Flask ejecuta
+# esta funcion y devuelve la pagina `index.html`.
+@app.route("/")
+def inicio():
+    # `render_template` busca archivos dentro de la carpeta `templates`.
+    return render_template("index.html")
+
+
+# Este bloque se ejecuta solo si corremos `python app.py` desde la terminal.
+if __name__ == "__main__":
+    # `debug=True` sirve en desarrollo porque reinicia el servidor
+    # cuando detecta cambios y muestra errores con mas detalle.
+    app.run(debug=True)
